@@ -1,0 +1,25 @@
+<header class="navbar" [class.navbar--scrolled]="scrolled()">
+  <div class="navbar__container">
+    <a href="#hero" class="navbar__logo" (click)="closeMenu()">
+      <span class="navbar__logo-name">Felipe Lohan</span>
+      <span class="navbar__logo-dot">.</span>
+    </a>
+
+    <nav class="navbar__links" [class.navbar__links--open]="menuOpen()">
+      @for (link of navLinks; track link.anchor) {
+        <a [href]="link.anchor" class="navbar__link" (click)="closeMenu()">
+          {{ link.label }}
+        </a>
+      }
+      <a href="mailto:felipelohan@gmail.com" class="navbar__cta" (click)="closeMenu()">
+        Contato
+      </a>
+    </nav>
+
+    <button class="navbar__hamburger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Menu">
+      <span class="navbar__bar" [class.navbar__bar--open-1]="menuOpen()"></span>
+      <span class="navbar__bar" [class.navbar__bar--open-2]="menuOpen()"></span>
+      <span class="navbar__bar" [class.navbar__bar--open-3]="menuOpen()"></span>
+    </button>
+  </div>
+</header>
