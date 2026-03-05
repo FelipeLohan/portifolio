@@ -8,14 +8,22 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2 — Production
-FROM node:20-alpine AS runner
+# Stage 2 — Production (nginx + Node SSR)
+FROM nginx:alpine AS runner
 WORKDIR /app
 
-# Angular SSR bundles Express into server.mjs — only dist is needed
+# Node.js is needed to run the SSR server alongside nginx
+RUN apk add --no-cache nodejs
+
+# Copy built Angular app
 COPY --from=builder /app/dist ./dist
 
-ENV NODE_ENV=production
-EXPOSE 4000
+# nginx config and startup script
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
-CMD ["node", "dist/portifolio/server/server.mjs"]
+ENV NODE_ENV=production
+EXPOSE 80
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
