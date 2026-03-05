@@ -1,0 +1,24 @@
+<section id="tech-stack" class="tech-stack">
+  <div class="tech-stack__container">
+    <app-section-title
+      title="Tecnologias"
+      subtitle="Ferramentas que uso no dia a dia"
+    />
+
+    <div class="tech-stack__grid">
+      @for (group of groups; track group.category) {
+        <div class="tech-stack__group fade-in">
+          <h3 class="tech-stack__group-title">
+            <span>{{ group.icon }}</span>
+            {{ group.label }}
+          </h3>
+          <div class="tech-stack__badges">
+            @for (tech of group.techs; track tech) {
+              <app-badge [label]="tech" variant="default" />
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
