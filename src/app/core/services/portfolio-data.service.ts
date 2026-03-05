@@ -1,0 +1,193 @@
+import { Injectable } from '@angular/core';
+import { Experience } from '../models/experience.model';
+import { Project } from '../models/project.model';
+import { Tech } from '../models/tech.model';
+
+export interface About {
+  name: string;
+  pronouns: string;
+  location: string;
+  title: string;
+  bio: string;
+  awards: Award[];
+}
+
+export interface Award {
+  title: string;
+  event: string;
+  year: number;
+  medal: string;
+}
+
+@Injectable({ providedIn: 'root' })
+export class PortfolioDataService {
+
+  getAbout(): About {
+    return {
+      name: 'Felipe Lohan',
+      pronouns: 'ele/dele',
+      location: 'Recife, Pernambuco, Brasil',
+      title: 'Desenvolvedor Full-Stack | Focado em Java e Node.js',
+      bio: `Desenvolvedor Full-Stack apaixonado por construir soluções escaláveis e bem arquitetadas.
+Com experiência sólida em Java, Spring, Node.js e NestJS no back-end, e Angular, React e Next.js no front-end,
+atuo com foco em qualidade de código, microsserviços e arquiteturas modernas.
+Atualmente Analista de Sistemas Estagiário no Bradesco, onde trabalho com Angular e Java em ambiente híbrido.
+Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com experiências em projetos reais
+de CRM, integrações cloud e sistemas distribuídos. Acredito que boas decisões técnicas fazem a diferença
+no produto final — e é isso que me motiva todos os dias.`,
+      awards: [
+        {
+          title: '🥇 1º Lugar',
+          event: 'Bradesco Hackathon',
+          year: 2025,
+          medal: '🥇',
+        },
+        {
+          title: '🥇 1º Lugar',
+          event: 'HackerCidadão 2025 — Prefeitura do Recife / Emprel',
+          year: 2025,
+          medal: '🥇',
+        },
+        {
+          title: '🥈 2º Lugar',
+          event: 'LuminaThon',
+          year: 2025,
+          medal: '🥈',
+        },
+        {
+          title: 'Participação',
+          event: 'Compass UOL Hackathon — Node.js Track',
+          year: 2025,
+          medal: '🏅',
+        },
+      ],
+    };
+  }
+
+  getExperiences(): Experience[] {
+    return [
+      {
+        id: '1',
+        company: 'Bradesco',
+        role: 'Analista de Sistemas Estagiário',
+        period: 'dez/2025 – atual',
+        description:
+          'Atuação como Analista de Sistemas Estagiário, desenvolvendo soluções com Angular no front-end e Java no back-end em ambiente híbrido. Participação em projetos internos do banco com foco em qualidade e escalabilidade.',
+        tags: ['Angular', 'Java', 'Spring', 'TypeScript', 'Git'],
+        current: true,
+        location: 'Recife, PE',
+        type: 'Estágio · Híbrido',
+      },
+      {
+        id: '2',
+        company: 'Hundert AI',
+        role: 'Desenvolvedor Full-Stack JR',
+        period: 'jul/2025 – set/2025',
+        description:
+          'Desenvolvimento full-stack autônomo com NestJS no back-end e Next.js/React no front-end. Responsável pela modelagem de dados e tomada de decisões técnicas da aplicação.',
+        tags: ['NestJS', 'Next.js', 'React', 'TypeScript', 'PostgreSQL'],
+        current: false,
+        location: 'Remoto',
+        type: 'Autônomo · Remoto',
+      },
+      {
+        id: '3',
+        company: 'Horizon',
+        role: 'Desenvolvedor Full-Stack JR',
+        period: 'mai/2025 – jul/2025',
+        description:
+          'Construção de sistema CRM do zero com NestJS em arquitetura de microsserviços. Uso de Redis para cache, arquitetura cloud e decisões técnicas sobre infraestrutura e comunicação entre serviços.',
+        tags: ['NestJS', 'Microsserviços', 'Redis', 'Docker', 'AWS'],
+        current: false,
+        location: 'Recife, PE',
+        type: 'Tempo integral · Remoto',
+      },
+      {
+        id: '4',
+        company: 'Compass UOL',
+        role: 'Desenvolvedor Back-End Estagiário',
+        period: 'abr/2025 – jul/2025',
+        description:
+          'Trilha intensiva de back-end com Node.js, Express e NestJS. Uso de Docker para containerização, mensageria com Kafka e RabbitMQ, e banco de dados NoSQL com MongoDB.',
+        tags: ['Node.js', 'Express', 'NestJS', 'Docker', 'Kafka', 'RabbitMQ', 'MongoDB'],
+        current: false,
+        location: 'Remoto',
+        type: 'Estágio · Remoto',
+      },
+    ];
+  }
+
+  getProjects(): Project[] {
+    return [
+      {
+        id: '1',
+        title: 'FinTrack — Bradesco Hackathon',
+        description:
+          'Solução vencedora do Bradesco Hackathon 2025. Plataforma de educação financeira com análise de gastos por IA, metas personalizadas e dashboards interativos para clientes do banco.',
+        techs: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'AWS'],
+        highlight: true,
+      },
+      {
+        id: '2',
+        title: 'CidadeConecta — HackerCidadão 2025',
+        description:
+          'Plataforma vencedora do HackerCidadão 2025 (Prefeitura do Recife / Emprel). Sistema de gestão de demandas urbanas que conecta cidadãos à prefeitura com geolocalização e acompanhamento em tempo real.',
+        techs: ['Next.js', 'NestJS', 'PostgreSQL', 'Supabase', 'Docker'],
+        highlight: true,
+        githubUrl: 'https://github.com/felipelohan',
+      },
+      {
+        id: '3',
+        title: 'LuminaBoard — LuminaThon',
+        description:
+          '2º lugar no LuminaThon. Ferramenta colaborativa de gestão de projetos com quadros Kanban em tempo real, integração com APIs externas e sistema de notificações via WebSocket.',
+        techs: ['React', 'NestJS', 'MongoDB', 'Redis', 'Socket.io'],
+        highlight: true,
+        githubUrl: 'https://github.com/felipelohan',
+      },
+      {
+        id: '4',
+        title: 'CRM Microsserviços — Horizon',
+        description:
+          'Sistema CRM empresarial construído do zero com arquitetura de microsserviços. Módulos independentes para clientes, vendas e relatórios, comunicando via mensageria assíncrona.',
+        techs: ['NestJS', 'Redis', 'Docker', 'AWS', 'PostgreSQL', 'RabbitMQ'],
+        highlight: false,
+      },
+    ];
+  }
+
+  getTechs(): Tech[] {
+    return [
+      // Back-end
+      { name: 'Java', category: 'backend' },
+      { name: 'Spring', category: 'backend' },
+      { name: 'Node.js', category: 'backend' },
+      { name: 'NestJS', category: 'backend' },
+      { name: 'Express', category: 'backend' },
+      { name: 'TypeScript', category: 'backend' },
+      // Front-end
+      { name: 'Angular', category: 'frontend' },
+      { name: 'React', category: 'frontend' },
+      { name: 'Next.js', category: 'frontend' },
+      // Banco de Dados
+      { name: 'PostgreSQL', category: 'database' },
+      { name: 'MySQL', category: 'database' },
+      { name: 'Supabase', category: 'database' },
+      { name: 'MongoDB', category: 'database' },
+      // DevOps / Cloud
+      { name: 'AWS', category: 'devops' },
+      { name: 'Azure', category: 'devops' },
+      { name: 'Docker', category: 'devops' },
+      { name: 'Dynatrace', category: 'devops' },
+      { name: 'Datadog', category: 'devops' },
+      { name: 'Kafka', category: 'devops' },
+      { name: 'RabbitMQ', category: 'devops' },
+      // Arquiteturas
+      { name: 'Hexagonal', category: 'architecture' },
+      { name: 'MVC', category: 'architecture' },
+      { name: 'Clean Architecture', category: 'architecture' },
+      { name: 'SPA', category: 'architecture' },
+      { name: 'MicroFrontends', category: 'architecture' },
+    ];
+  }
+}
