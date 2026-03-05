@@ -1,0 +1,14 @@
+<section id="projects" class="projects">
+  <div class="projects__container">
+    <app-section-title
+      title="Projetos"
+      subtitle="Soluções que construí do zero"
+    />
+
+    <div class="projects__grid">
+      @for (project of projects; track project.id) {
+        <div class="fade-in"><app-project-card [project]="project" /></div>
+      }
+    </div>
+  </div>
+</section>
