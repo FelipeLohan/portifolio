@@ -1,0 +1,32 @@
+<section id="hero" class="hero">
+  <div class="hero__bg-glow hero__bg-glow--blue"></div>
+  <div class="hero__bg-glow hero__bg-glow--cyan"></div>
+
+  <div class="hero__container">
+    <div class="hero__content">
+      <div class="hero__awards">
+        @for (award of awards; track award.event) {
+          <span class="hero__award-badge">
+            {{ award.medal }} {{ award.event }}
+          </span>
+        }
+      </div>
+
+      <h1 class="hero__name">{{ about.name }}</h1>
+
+      <p class="hero__subtitle">
+        Desenvolvedor Full-Stack
+        <span class="hero__subtitle-stack">Java · Node.js · Angular</span>
+      </p>
+
+      <p class="hero__tagline">
+        Criando soluções escaláveis com paixão por arquitetura de software.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#projects" class="hero__btn hero__btn--primary">Ver Projetos</a>
+        <a href="mailto:felipelohan@gmail.com" class="hero__btn hero__btn--outline">Contato</a>
+      </div>
+    </div>
+  </div>
+</section>
