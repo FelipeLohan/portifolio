@@ -1,12 +1,23 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, afterNextRender } from '@angular/core';
+import { Navbar } from './layout/navbar/navbar';
+import { Footer } from './layout/footer/footer';
+import { Hero } from './features/hero/hero';
+import { About } from './features/about/about';
+import { Experience } from './features/experience/experience';
+import { Projects } from './features/projects/projects';
+import { TechStack } from './features/tech-stack/tech-stack';
+import { ScrollAnimationService } from './core/services/scroll-animation.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Navbar, Footer, Hero, About, Experience, Projects, TechStack],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('portifolio');
+  private readonly scrollAnim = inject(ScrollAnimationService);
+
+  constructor() {
+    afterNextRender(() => this.scrollAnim.observe());
+  }
 }
