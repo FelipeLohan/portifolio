@@ -1,0 +1,46 @@
+<section id="about" class="about">
+  <div class="about__container">
+    <app-section-title title="Sobre Mim" subtitle="Quem está por trás do código" />
+
+    <div class="about__grid fade-in">
+      <!-- Coluna esquerda: bio -->
+      <div class="about__left">
+        <p class="about__bio">{{ about.bio }}</p>
+
+        @if (currentJob) {
+          <div class="about__current">
+            <span class="about__current-dot"></span>
+            <p>
+              Atualmente trabalhando na
+              <strong>{{ currentJob.company }}</strong>
+              como {{ currentJob.role }}
+            </p>
+          </div>
+        }
+
+        <div class="about__location">
+          <span class="about__location-icon">📍</span>
+          <span>{{ about.location }}</span>
+        </div>
+      </div>
+
+      <!-- Coluna direita: prêmios -->
+      <div class="about__right">
+        <div class="about__awards-card">
+          <h3 class="about__awards-title">Prêmios & Conquistas</h3>
+          <ul class="about__awards-list">
+            @for (award of about.awards; track award.event) {
+              <li class="about__award-item">
+                <span class="about__award-medal">{{ award.medal }}</span>
+                <div class="about__award-info">
+                  <span class="about__award-label">{{ award.title }}</span>
+                  <span class="about__award-event">{{ award.event }} · {{ award.year }}</span>
+                </div>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
