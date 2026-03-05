@@ -1,0 +1,37 @@
+<div class="exp-card">
+  <div class="exp-card__logo">
+    {{ initial() }}
+  </div>
+
+  <div class="exp-card__body">
+    <div class="exp-card__header">
+      <div class="exp-card__title-group">
+        <h3 class="exp-card__role">{{ experience().role }}</h3>
+        <span class="exp-card__company">{{ experience().company }}</span>
+      </div>
+      @if (experience().current) {
+        <app-badge label="Atual" variant="current" />
+      }
+    </div>
+
+    <div class="exp-card__meta">
+      <span class="exp-card__period">{{ experience().period }}</span>
+      @if (experience().location) {
+        <span class="exp-card__sep">·</span>
+        <span class="exp-card__location">{{ experience().location }}</span>
+      }
+      @if (experience().type) {
+        <span class="exp-card__sep">·</span>
+        <span class="exp-card__type">{{ experience().type }}</span>
+      }
+    </div>
+
+    <p class="exp-card__description">{{ experience().description }}</p>
+
+    <div class="exp-card__tags">
+      @for (tag of experience().tags; track tag) {
+        <app-badge [label]="tag" variant="default" />
+      }
+    </div>
+  </div>
+</div>
