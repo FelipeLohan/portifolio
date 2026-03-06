@@ -2,3 +2,8 @@
   0%, 100% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); }
   50%       { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.08); }
 }
+
+@keyframes carousel-fade {
+  from { opacity: 0; transform: translateX(8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
