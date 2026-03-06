@@ -1,13 +1,15 @@
-<section id="projects" class="projects">
-  <div class="projects__container">
+<section id="projects" class="py-24 bg-slate-50">
+  <div class="max-w-[1200px] mx-auto px-6">
     <app-section-title
       title="Projetos"
       subtitle="Soluções que construí do zero"
     />
 
-    <div class="projects__grid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       @for (project of projects; track project.id) {
-        <div class="fade-in"><app-project-card [project]="project" /></div>
+        <div class="flex flex-col fade-in">
+          <app-project-card [project]="project" />
+        </div>
       }
     </div>
   </div>
