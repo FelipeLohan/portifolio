@@ -24,7 +24,6 @@ export interface Award {
 
 @Injectable({ providedIn: 'root' })
 export class PortfolioDataService {
-
   getAbout(): About {
     return {
       name: 'Felipe Lohan',
@@ -46,7 +45,8 @@ no produto final — e é isso que me motiva todos os dias.`,
           medal: '🥇',
           image: 'BradescoHackathon.jpg',
           imagePosition: 'top',
-          description: 'Vencedores do Bradesco Hackathon 2025 com o FinTrack — plataforma de educação financeira com análise de gastos por IA, metas personalizadas e dashboards interativos para clientes do banco.',
+          description:
+            'Vencedores do Bradesco Hackathon 2025 com o FinTrack — plataforma de educação financeira com análise de gastos por IA, metas personalizadas e dashboards interativos para clientes do banco.',
         },
         {
           title: '1º Lugar',
@@ -55,7 +55,8 @@ no produto final — e é isso que me motiva todos os dias.`,
           medal: '🥇',
           image: 'HackerCidadão.jpg',
           imagePosition: 'top',
-          description: 'Vencedores do HackerCidadão 2025 com o CidadeConecta — plataforma que conecta cidadãos à Prefeitura do Recife com geolocalização e acompanhamento de demandas urbanas em tempo real.',
+          description:
+            'Vencedores do HackerCidadão 2025 com o CidadeConecta — plataforma que conecta cidadãos à Prefeitura do Recife com geolocalização e acompanhamento de demandas urbanas em tempo real.',
         },
         {
           title: '2º Lugar',
@@ -63,7 +64,8 @@ no produto final — e é isso que me motiva todos os dias.`,
           year: 2025,
           medal: '🥈',
           image: 'Luminathon.jpg',
-          description: '2º lugar no LuminaThon com o LuminaBoard — ferramenta colaborativa de gestão de projetos com quadros Kanban em tempo real, integração com APIs externas e notificações via WebSocket.',
+          description:
+            '2º lugar no LuminaThon com o LuminaBoard — ferramenta colaborativa de gestão de projetos com quadros Kanban em tempo real, integração com APIs externas e notificações via WebSocket.',
         },
         {
           title: 'Participação',
@@ -72,7 +74,8 @@ no produto final — e é isso que me motiva todos os dias.`,
           medal: '🏅',
           image: 'HackaHealth.jpg',
           imagePosition: 'top',
-          description: 'Participação no HackaHealth, hackathon voltado à inovação em saúde, desenvolvendo solução de impacto social com foco em acessibilidade e tecnologia aplicada ao bem-estar.',
+          description:
+            'Participação no HackaHealth, hackathon voltado à inovação em saúde, desenvolvendo solução de impacto social com foco em acessibilidade e tecnologia aplicada ao bem-estar.',
         },
         {
           title: 'Participação',
@@ -80,7 +83,8 @@ no produto final — e é isso que me motiva todos os dias.`,
           year: 2025,
           medal: '🚀',
           image: 'Nasa%20Hackathon.jpg',
-          description: 'Participação no NASA Space Apps Challenge, maior hackathon do mundo, com solução voltada à exploração espacial e visualização de dados abertos da NASA.',
+          description:
+            'Participação no NASA Space Apps Challenge, maior hackathon do mundo, com solução voltada à exploração espacial e visualização de dados abertos da NASA.',
         },
       ],
     };
@@ -122,7 +126,7 @@ no produto final — e é isso que me motiva todos os dias.`,
         period: 'mai/2025 – jul/2025',
         description:
           'Construção de sistema CRM do zero com NestJS em arquitetura de microsserviços. Uso de Redis para cache, arquitetura cloud e decisões técnicas sobre infraestrutura e comunicação entre serviços.',
-        tags: ['NestJS', 'Microsserviços', 'Redis', 'Docker', 'AWS'],
+        tags: ['NestJS', 'Redis', 'Docker', 'AWS'],
         current: false,
         location: 'Recife, PE',
         type: 'Tempo integral · Remoto',
@@ -185,29 +189,91 @@ no produto final — e é isso que me motiva todos os dias.`,
   getTechs(): Tech[] {
     return [
       // Back-end
-      { name: 'Java',       category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/java/ED8B00' },
-      { name: 'Spring',     category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/spring/6DB33F' },
-      { name: 'Node.js',    category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/nodedotjs/339933' },
-      { name: 'NestJS',     category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/nestjs/E0234E' },
-      { name: 'Express',    category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/express/64748B' },
-      { name: 'TypeScript', category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/typescript/3178C6' },
+      {
+        name: 'Java',
+        category: 'backend',
+        iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+      },
+      { name: 'Spring', category: 'backend', iconUrl: 'https://cdn.simpleicons.org/spring/6DB33F' },
+      {
+        name: 'Node.js',
+        category: 'backend',
+        iconUrl: 'https://cdn.simpleicons.org/nodedotjs/339933',
+      },
+      { name: 'NestJS', category: 'backend', iconUrl: 'https://cdn.simpleicons.org/nestjs/E0234E' },
+      {
+        name: 'Express',
+        category: 'backend',
+        iconUrl: 'https://cdn.simpleicons.org/express/64748B',
+      },
+      {
+        name: 'TypeScript',
+        category: 'backend',
+        iconUrl: 'https://cdn.simpleicons.org/typescript/3178C6',
+      },
       // Front-end
-      { name: 'Angular',    category: 'frontend', iconUrl: 'https://cdn.simpleicons.org/angular/DD0031' },
-      { name: 'React',      category: 'frontend', iconUrl: 'https://cdn.simpleicons.org/react/06B6D4' },
-      { name: 'Next.js',    category: 'frontend', iconUrl: 'https://cdn.simpleicons.org/nextdotjs/0F172A' },
+      {
+        name: 'Angular',
+        category: 'frontend',
+        iconUrl: 'https://cdn.simpleicons.org/angular/DD0031',
+      },
+      { name: 'React', category: 'frontend', iconUrl: 'https://cdn.simpleicons.org/react/06B6D4' },
+      {
+        name: 'Next.js',
+        category: 'frontend',
+        iconUrl: 'https://cdn.simpleicons.org/nextdotjs/0F172A',
+      },
       // Banco de Dados
-      { name: 'PostgreSQL', category: 'database', iconUrl: 'https://cdn.simpleicons.org/postgresql/4169E1' },
-      { name: 'MySQL',      category: 'database', iconUrl: 'https://cdn.simpleicons.org/mysql/4479A1' },
-      { name: 'Supabase',   category: 'database', iconUrl: 'https://cdn.simpleicons.org/supabase/3ECF8E' },
-      { name: 'MongoDB',    category: 'database', iconUrl: 'https://cdn.simpleicons.org/mongodb/47A248' },
+      {
+        name: 'PostgreSQL',
+        category: 'database',
+        iconUrl: 'https://cdn.simpleicons.org/postgresql/4169E1',
+      },
+      { name: 'MySQL', category: 'database', iconUrl: 'https://cdn.simpleicons.org/mysql/4479A1' },
+      {
+        name: 'Supabase',
+        category: 'database',
+        iconUrl: 'https://cdn.simpleicons.org/supabase/3ECF8E',
+      },
+      {
+        name: 'MongoDB',
+        category: 'database',
+        iconUrl: 'https://cdn.simpleicons.org/mongodb/47A248',
+      },
       // DevOps / Cloud
-      { name: 'AWS',        category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/amazonaws/FF9900' },
-      { name: 'Azure',      category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/microsoftazure/0078D4' },
-      { name: 'Docker',     category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/docker/2496ED' },
-      { name: 'Dynatrace',  category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/dynatrace/1496FF' },
-      { name: 'Datadog',    category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/datadog/632CA6' },
-      { name: 'Kafka',      category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/apachekafka/374151' },
-      { name: 'RabbitMQ',   category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/rabbitmq/FF6600' },
+      {
+        name: 'AWS',
+        category: 'devops',
+        iconUrl:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+      },
+      {
+        name: 'Azure',
+        category: 'devops',
+        iconUrl:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg',
+      },
+      { name: 'Docker', category: 'devops', iconUrl: 'https://cdn.simpleicons.org/docker/2496ED' },
+      {
+        name: 'Dynatrace',
+        category: 'devops',
+        iconUrl: 'https://cdn.simpleicons.org/dynatrace/1496FF',
+      },
+      {
+        name: 'Datadog',
+        category: 'devops',
+        iconUrl: 'https://cdn.simpleicons.org/datadog/632CA6',
+      },
+      {
+        name: 'Kafka',
+        category: 'devops',
+        iconUrl: 'https://cdn.simpleicons.org/apachekafka/374151',
+      },
+      {
+        name: 'RabbitMQ',
+        category: 'devops',
+        iconUrl: 'https://cdn.simpleicons.org/rabbitmq/FF6600',
+      },
     ];
   }
 }
