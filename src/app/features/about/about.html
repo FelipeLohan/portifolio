@@ -1,46 +1,55 @@
-<section id="about" class="about">
-  <div class="about__container">
+<section id="about" class="py-24 bg-slate-50">
+  <div class="max-w-[1200px] mx-auto px-6">
     <app-section-title title="Sobre Mim" subtitle="Quem está por trás do código" />
 
-    <div class="about__grid fade-in">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start fade-in">
+
       <!-- Coluna esquerda: bio -->
-      <div class="about__left">
-        <p class="about__bio">{{ about.bio }}</p>
+      <div>
+        <p class="text-slate-600 text-[1.05rem] leading-[1.8] m-0 mb-8 whitespace-pre-line">
+          {{ about.bio }}
+        </p>
 
         @if (currentJob) {
-          <div class="about__current">
-            <span class="about__current-dot"></span>
-            <p>
+          <div class="flex items-start gap-3 bg-blue-50 border border-blue-200
+                      rounded-xl px-5 py-4 mb-6">
+            <span class="block w-2.5 h-2.5 min-w-[10px] bg-green-500 rounded-full mt-1.5
+                         shadow-[0_0_0_3px_rgba(34,197,94,0.2)]
+                         [animation:pulse-dot_2s_ease-in-out_infinite]"></span>
+            <p class="m-0 text-slate-800 text-[0.95rem] leading-relaxed">
               Atualmente trabalhando na
-              <strong>{{ currentJob.company }}</strong>
+              <strong class="text-blue-600 font-semibold">{{ currentJob.company }}</strong>
               como {{ currentJob.role }}
             </p>
           </div>
         }
 
-        <div class="about__location">
-          <span class="about__location-icon">📍</span>
+        <div class="flex items-center gap-2 text-slate-500 text-[0.9rem]">
+          <span class="text-base">📍</span>
           <span>{{ about.location }}</span>
         </div>
       </div>
 
       <!-- Coluna direita: prêmios -->
-      <div class="about__right">
-        <div class="about__awards-card">
-          <h3 class="about__awards-title">Prêmios & Conquistas</h3>
-          <ul class="about__awards-list">
+      <div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-7 shadow-sm">
+          <h3 class="text-[0.8rem] font-bold text-slate-400 uppercase tracking-[0.08em] m-0 mb-6">
+            Prêmios & Conquistas
+          </h3>
+          <ul class="list-none m-0 p-0 flex flex-col gap-5">
             @for (award of about.awards; track award.event) {
-              <li class="about__award-item">
-                <span class="about__award-medal">{{ award.medal }}</span>
-                <div class="about__award-info">
-                  <span class="about__award-label">{{ award.title }}</span>
-                  <span class="about__award-event">{{ award.event }} · {{ award.year }}</span>
+              <li class="flex items-center gap-4 pb-5 border-b border-slate-100 last:border-b-0 last:pb-0">
+                <span class="text-[1.75rem] leading-none flex-shrink-0">{{ award.medal }}</span>
+                <div class="flex flex-col gap-[0.2rem]">
+                  <span class="text-[0.95rem] font-semibold text-slate-900">{{ award.title }}</span>
+                  <span class="text-[0.82rem] text-slate-500">{{ award.event }} · {{ award.year }}</span>
                 </div>
               </li>
             }
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </section>
