@@ -12,7 +12,14 @@ export class About {
   private readonly data = inject(PortfolioDataService);
 
   readonly about = this.data.getAbout();
-  readonly currentJob = this.data.getExperiences().find(e => e.current);
+
+  readonly highlights = [
+    { icon: '🏗️', label: 'Arquitetura de Software' },
+    { icon: '☁️', label: 'Cloud & DevOps' },
+    { icon: '🔗', label: 'Microsserviços' },
+    { icon: '🏆', label: 'Hackathons' },
+    { icon: '⚡', label: 'Alta Performance' },
+  ];
 
   readonly currentIndex = signal(0);
   readonly currentAward = computed(() => this.about.awards[this.currentIndex()]);

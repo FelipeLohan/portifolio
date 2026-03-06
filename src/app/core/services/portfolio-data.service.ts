@@ -30,13 +30,9 @@ export class PortfolioDataService {
       pronouns: 'ele/dele',
       location: 'Recife, Pernambuco, Brasil',
       title: 'Desenvolvedor Full-Stack | Focado em Java e Node.js',
-      bio: `Desenvolvedor Full-Stack apaixonado por construir soluções escaláveis e bem arquitetadas.
-Com experiência sólida em Java, Spring, Node.js e NestJS no back-end, e Angular, React e Next.js no front-end,
-atuo com foco em qualidade de código, microsserviços e arquiteturas modernas.
-Atualmente Analista de Sistemas Estagiário no Bradesco, onde trabalho com Angular e Java em ambiente híbrido.
-Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com experiências em projetos reais
-de CRM, integrações cloud e sistemas distribuídos. Acredito que boas decisões técnicas fazem a diferença
-no produto final — e é isso que me motiva todos os dias.`,
+      bio: `Desenvolvedor Full-Stack apaixonado por arquitetura de software e soluções escaláveis. Atuo com Java, Spring, Node.js e NestJS no back-end, e Angular, React e Next.js no front-end — sempre com foco em qualidade de código e design de sistemas.
+
+Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com experiência em projetos reais de CRM, integrações cloud e sistemas distribuídos. Acredito que boas decisões técnicas fazem toda a diferença no produto final.`,
       awards: [
         {
           title: '1º Lugar',
