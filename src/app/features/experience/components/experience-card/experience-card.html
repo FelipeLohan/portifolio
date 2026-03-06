@@ -50,7 +50,20 @@
     <!-- Tags de tecnologia -->
     <div class="flex flex-wrap gap-1.5 mt-1">
       @for (tag of experience().tags; track tag) {
-        <app-badge [label]="tag" variant="default" />
+        @if (iconUrl(tag); as url) {
+          <div [title]="tag"
+               class="w-7 h-7 flex items-center justify-center
+                      bg-slate-50 border border-slate-200 rounded-lg
+                      transition-all duration-150
+                      hover:border-blue-200 hover:bg-blue-50 hover:scale-110">
+            <img [src]="url" [alt]="tag" class="w-4 h-4" />
+          </div>
+        } @else {
+          <span class="text-[0.72rem] font-medium text-slate-500
+                       bg-slate-100 border border-slate-200 rounded-md px-2 py-0.5">
+            {{ tag }}
+          </span>
+        }
       }
     </div>
 
