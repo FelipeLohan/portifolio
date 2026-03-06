@@ -1,4 +1,5 @@
-import { Component, signal, HostListener } from '@angular/core';
+import { Component, signal, HostListener, inject } from '@angular/core';
+import { ThemeService } from '../../core/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,7 @@ import { Component, signal, HostListener } from '@angular/core';
 export class Navbar {
   menuOpen = signal(false);
   scrolled = signal(false);
+  readonly theme = inject(ThemeService);
 
   readonly navLinks = [
     { label: 'Sobre', anchor: '#about' },

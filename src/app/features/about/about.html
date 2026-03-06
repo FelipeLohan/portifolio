@@ -1,4 +1,4 @@
-<section id="about" class="py-24 bg-slate-50">
+<section id="about" class="py-24 bg-slate-50 dark:bg-slate-800/50">
   <div class="max-w-[1200px] mx-auto px-6">
     <app-section-title title="Sobre Mim" subtitle="Quem está por trás do código" />
 
@@ -6,25 +6,25 @@
 
       <!-- Coluna esquerda: bio -->
       <div>
-        <p class="text-slate-600 text-[1.05rem] leading-[1.8] m-0 mb-8 whitespace-pre-line">
+        <p class="text-slate-600 dark:text-slate-300 text-[1.05rem] leading-[1.8] m-0 mb-8 whitespace-pre-line">
           {{ about.bio }}
         </p>
 
         @if (currentJob) {
-          <div class="flex items-start gap-3 bg-blue-50 border border-blue-200
+          <div class="flex items-start gap-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800
                       rounded-xl px-5 py-4 mb-6">
             <span class="block w-2.5 h-2.5 min-w-[10px] bg-green-500 rounded-full mt-1.5
                          shadow-[0_0_0_3px_rgba(34,197,94,0.2)]
                          [animation:pulse-dot_2s_ease-in-out_infinite]"></span>
-            <p class="m-0 text-slate-800 text-[0.95rem] leading-relaxed">
+            <p class="m-0 text-slate-800 dark:text-slate-200 text-[0.95rem] leading-relaxed">
               Atualmente trabalhando na
-              <strong class="text-blue-600 font-semibold">{{ currentJob.company }}</strong>
+              <strong class="text-blue-600 dark:text-blue-400 font-semibold">{{ currentJob.company }}</strong>
               como {{ currentJob.role }}
             </p>
           </div>
         }
 
-        <div class="flex items-center gap-2 text-slate-500 text-[0.9rem]">
+        <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-[0.9rem]">
           <span class="text-base">📍</span>
           <span>{{ about.location }}</span>
         </div>
@@ -32,23 +32,23 @@
 
       <!-- Coluna direita: carrossel de prêmios -->
       <div>
-        <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
+        <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm overflow-hidden">
 
           <!-- Imagem -->
-          <div class="relative h-72 bg-slate-100 overflow-hidden">
+          <div class="relative h-72 bg-slate-100 dark:bg-slate-700 overflow-hidden">
             <img [src]="currentAward().image" [alt]="currentAward().event"
                  class="w-full h-full object-cover"
                  [style.object-position]="currentAward().imagePosition ?? 'center'" />
             <!-- Badge do resultado -->
             <div class="absolute top-3 left-3 flex items-center gap-1.5
-                        bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-sm">
+                        bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-sm">
               <span class="text-base leading-none">{{ currentAward().medal }}</span>
-              <span class="text-[0.78rem] font-bold text-slate-800">{{ currentAward().title }}</span>
+              <span class="text-[0.78rem] font-bold text-slate-800 dark:text-slate-100">{{ currentAward().title }}</span>
             </div>
             <!-- Ano -->
-            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm
+            <div class="absolute top-3 right-3 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm
                         rounded-full px-2.5 py-1 shadow-sm
-                        text-[0.72rem] font-semibold text-slate-500">
+                        text-[0.72rem] font-semibold text-slate-500 dark:text-slate-400">
               {{ currentAward().year }}
             </div>
           </div>
@@ -57,10 +57,10 @@
           @for (award of about.awards; track $index) {
             @if ($index === currentIndex()) {
               <div class="p-6 [animation:carousel-fade_0.25s_ease_both]">
-                <h4 class="text-[1rem] font-bold text-slate-900 m-0 mb-1 leading-snug">
+                <h4 class="text-[1rem] font-bold text-slate-900 dark:text-slate-100 m-0 mb-1 leading-snug">
                   {{ award.event }}
                 </h4>
-                <p class="text-[0.87rem] text-slate-500 leading-relaxed m-0 mb-5">
+                <p class="text-[0.87rem] text-slate-500 dark:text-slate-400 leading-relaxed m-0 mb-5">
                   {{ award.description }}
                 </p>
 
@@ -74,7 +74,7 @@
                               [class]="'h-1.5 rounded-full transition-all duration-300 '
                                        + (di === currentIndex()
                                           ? 'w-5 bg-blue-600'
-                                          : 'w-1.5 bg-slate-200 hover:bg-slate-300')">
+                                          : 'w-1.5 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600')">
                       </button>
                     }
                   </div>
@@ -83,15 +83,15 @@
                   <div class="flex gap-2">
                     <button (click)="prev()"
                             class="w-8 h-8 flex items-center justify-center rounded-full
-                                   border border-slate-200 text-slate-400 text-lg leading-none
-                                   hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50
+                                   border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500 text-lg leading-none
+                                   hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30
                                    transition-all duration-200">
                       ‹
                     </button>
                     <button (click)="next()"
                             class="w-8 h-8 flex items-center justify-center rounded-full
-                                   border border-slate-200 text-slate-400 text-lg leading-none
-                                   hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50
+                                   border border-slate-200 dark:border-slate-700 text-slate-400 dark:text-slate-500 text-lg leading-none
+                                   hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30
                                    transition-all duration-200">
                       ›
                     </button>

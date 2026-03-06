@@ -1,6 +1,6 @@
-<section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-white">
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-white dark:bg-slate-900">
 
-  <!-- Decorações de fundo sutis para tema claro -->
+  <!-- Decorações de fundo sutis -->
   <div class="absolute rounded-full blur-[80px] opacity-[0.08] pointer-events-none
                w-[600px] h-[600px] bg-blue-500 -top-[100px] -left-[150px]"></div>
   <div class="absolute rounded-full blur-[80px] opacity-[0.08] pointer-events-none
@@ -14,25 +14,25 @@
 
         <div class="flex flex-wrap gap-2 mb-7 [animation:hero-fade-up_0.8s_ease_0.1s_both]">
           @for (award of awards; track award.event) {
-            <span class="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-200
-                         text-blue-600 text-[0.78rem] font-semibold px-3 py-1.5 rounded-full tracking-wide">
+            <span class="inline-flex items-center gap-1.5 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800
+                         text-blue-600 dark:text-blue-400 text-[0.78rem] font-semibold px-3 py-1.5 rounded-full tracking-wide">
               {{ award.medal }} {{ award.event }}
             </span>
           }
         </div>
 
         <h1 class="text-[clamp(3rem,8vw,5.5rem)] font-extrabold leading-none tracking-[-0.04em]
-                   text-slate-900 m-0 mb-4 [animation:hero-fade-up_0.8s_ease_0.2s_both]">
+                   text-slate-900 dark:text-slate-100 m-0 mb-4 [animation:hero-fade-up_0.8s_ease_0.2s_both]">
           {{ about.name }}
         </h1>
 
-        <p class="text-[clamp(1.1rem,2.5vw,1.4rem)] text-slate-500 font-medium m-0 mb-3
+        <p class="text-[clamp(1.1rem,2.5vw,1.4rem)] text-slate-500 dark:text-slate-400 font-medium m-0 mb-3
                   [animation:hero-fade-up_0.8s_ease_0.3s_both]">
           Desenvolvedor Full-Stack
-          <span class="text-blue-600 font-semibold ml-2">Java · Node.js · Angular</span>
+          <span class="text-blue-600 dark:text-blue-400 font-semibold ml-2">Java · Node.js · Angular</span>
         </p>
 
-        <p class="text-[clamp(1rem,2vw,1.2rem)] text-slate-500 max-w-[560px] leading-relaxed
+        <p class="text-[clamp(1rem,2vw,1.2rem)] text-slate-500 dark:text-slate-400 max-w-[560px] leading-relaxed
                   m-0 mb-10 [animation:hero-fade-up_0.8s_ease_0.4s_both]">
           Criando soluções escaláveis com paixão por arquitetura de software.
         </p>
@@ -49,9 +49,10 @@
           </a>
           <a href="mailto:felipelohan@gmail.com"
              class="inline-flex items-center no-underline text-[0.95rem] font-semibold
-                    px-7 py-3.5 rounded-lg border border-slate-300 text-slate-700 bg-white
+                    px-7 py-3.5 rounded-lg border border-slate-300 dark:border-slate-600
+                    text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800
                     transition-all duration-200 hover:-translate-y-0.5
-                    hover:border-slate-400 hover:bg-slate-50">
+                    hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700">
             Contato
           </a>
         </div>
@@ -64,9 +65,9 @@
           <!-- Anel externo decorativo -->
           <div class="absolute inset-0 rounded-full
                       bg-gradient-to-br from-blue-200 via-sky-100 to-transparent
-                      scale-[1.06] opacity-60"></div>
+                      scale-[1.06] opacity-60 dark:opacity-20"></div>
           <!-- Anel de borda azul -->
-          <div class="absolute inset-0 rounded-full border-2 border-blue-200 scale-[1.03]"></div>
+          <div class="absolute inset-0 rounded-full border-2 border-blue-200 dark:border-blue-800 scale-[1.03]"></div>
           <!-- Foto -->
           <img src="Foto.png" alt="Felipe Lohan"
                class="relative w-[280px] h-[280px] rounded-full object-cover object-top
