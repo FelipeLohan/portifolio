@@ -1,18 +1,20 @@
-<section id="tech-stack" class="tech-stack">
-  <div class="tech-stack__container">
+<section id="tech-stack" class="py-24 bg-white">
+  <div class="max-w-[1200px] mx-auto px-6">
     <app-section-title
       title="Tecnologias"
       subtitle="Ferramentas que uso no dia a dia"
     />
 
-    <div class="tech-stack__grid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       @for (group of groups; track group.category) {
-        <div class="tech-stack__group fade-in">
-          <h3 class="tech-stack__group-title">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col gap-4
+                    transition-colors duration-200 hover:border-blue-200 shadow-sm fade-in">
+          <h3 class="flex items-center gap-2 text-[0.8rem] font-bold uppercase tracking-[0.08em]
+                     text-slate-400 m-0">
             <span>{{ group.icon }}</span>
             {{ group.label }}
           </h3>
-          <div class="tech-stack__badges">
+          <div class="flex flex-wrap gap-2">
             @for (tech of group.techs; track tech) {
               <app-badge [label]="tech" variant="default" />
             }
