@@ -1,37 +1,51 @@
-<div class="exp-card">
-  <div class="exp-card__logo">
+<div class="flex gap-5 bg-white border border-slate-200 rounded-2xl p-6
+            transition-all duration-200 hover:border-blue-300 hover:translate-x-1
+            shadow-sm hover:shadow-md">
+
+  <!-- Logo inicial da empresa -->
+  <div class="flex items-center justify-center w-11 h-11 min-w-[44px]
+              bg-blue-50 text-blue-600 rounded-[0.625rem] text-lg font-extrabold flex-shrink-0">
     {{ initial() }}
   </div>
 
-  <div class="exp-card__body">
-    <div class="exp-card__header">
-      <div class="exp-card__title-group">
-        <h3 class="exp-card__role">{{ experience().role }}</h3>
-        <span class="exp-card__company">{{ experience().company }}</span>
+  <!-- Corpo -->
+  <div class="flex flex-col gap-2.5 min-w-0">
+
+    <!-- Header: cargo + badge atual -->
+    <div class="flex items-start justify-between gap-4 flex-wrap">
+      <div class="flex flex-col gap-[0.15rem]">
+        <h3 class="text-base font-bold text-slate-900 m-0">{{ experience().role }}</h3>
+        <span class="text-sm text-blue-600 font-semibold">{{ experience().company }}</span>
       </div>
       @if (experience().current) {
         <app-badge label="Atual" variant="current" />
       }
     </div>
 
-    <div class="exp-card__meta">
-      <span class="exp-card__period">{{ experience().period }}</span>
+    <!-- Meta: período · local · tipo -->
+    <div class="flex flex-wrap items-center gap-1.5 text-[0.8rem] text-slate-400">
+      <span>{{ experience().period }}</span>
       @if (experience().location) {
-        <span class="exp-card__sep">·</span>
-        <span class="exp-card__location">{{ experience().location }}</span>
+        <span class="opacity-40">·</span>
+        <span>{{ experience().location }}</span>
       }
       @if (experience().type) {
-        <span class="exp-card__sep">·</span>
-        <span class="exp-card__type">{{ experience().type }}</span>
+        <span class="opacity-40">·</span>
+        <span>{{ experience().type }}</span>
       }
     </div>
 
-    <p class="exp-card__description">{{ experience().description }}</p>
+    <!-- Descrição -->
+    <p class="text-[0.9rem] text-slate-500 leading-[1.65] mt-1 m-0">
+      {{ experience().description }}
+    </p>
 
-    <div class="exp-card__tags">
+    <!-- Tags de tecnologia -->
+    <div class="flex flex-wrap gap-1.5 mt-1">
       @for (tag of experience().tags; track tag) {
         <app-badge [label]="tag" variant="default" />
       }
     </div>
+
   </div>
 </div>
