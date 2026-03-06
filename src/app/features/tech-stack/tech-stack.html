@@ -5,20 +5,18 @@
       subtitle="Ferramentas que uso no dia a dia"
     />
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      @for (group of groups; track group.category) {
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col gap-4
-                    transition-colors duration-200 hover:border-blue-200 shadow-sm fade-in">
-          <h3 class="flex items-center gap-2 text-[0.8rem] font-bold uppercase tracking-[0.08em]
-                     text-slate-400 m-0">
-            <span>{{ group.icon }}</span>
-            {{ group.label }}
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            @for (tech of group.techs; track tech) {
-              <app-badge [label]="tech" variant="default" />
-            }
+    <div class="flex flex-wrap justify-center gap-4 fade-in">
+      @for (tech of techs; track tech.name) {
+        <div class="group flex flex-col items-center gap-2 w-[72px]">
+          <div class="w-14 h-14 flex items-center justify-center
+                      bg-white border border-slate-200 rounded-2xl shadow-sm
+                      transition-all duration-200
+                      group-hover:border-blue-200 group-hover:shadow-md group-hover:-translate-y-1">
+            <img [src]="tech.iconUrl" [alt]="tech.name" class="w-8 h-8" />
           </div>
+          <span class="text-[0.7rem] font-medium text-slate-500 text-center leading-tight">
+            {{ tech.name }}
+          </span>
         </div>
       }
     </div>
