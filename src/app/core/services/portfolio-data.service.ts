@@ -69,6 +69,7 @@ no produto final — e é isso que me motiva todos os dias.`,
       {
         id: '1',
         company: 'Bradesco',
+        logo: 'bradesco_logo.jpg',
         role: 'Analista de Sistemas Estagiário',
         period: 'dez/2025 – atual',
         description:
@@ -81,6 +82,7 @@ no produto final — e é isso que me motiva todos os dias.`,
       {
         id: '2',
         company: 'Hundert AI',
+        logo: 'hundert_logo.jpg',
         role: 'Desenvolvedor Full-Stack JR',
         period: 'jul/2025 – set/2025',
         description:
@@ -93,6 +95,7 @@ no produto final — e é isso que me motiva todos os dias.`,
       {
         id: '3',
         company: 'Horizon',
+        logo: 'agency_horizon_logo.jpg',
         role: 'Desenvolvedor Full-Stack JR',
         period: 'mai/2025 – jul/2025',
         description:
@@ -105,6 +108,7 @@ no produto final — e é isso que me motiva todos os dias.`,
       {
         id: '4',
         company: 'Compass UOL',
+        logo: 'compass_uol_logo.jpg',
         role: 'Desenvolvedor Back-End Estagiário',
         period: 'abr/2025 – jul/2025',
         description:
@@ -159,35 +163,29 @@ no produto final — e é isso que me motiva todos os dias.`,
   getTechs(): Tech[] {
     return [
       // Back-end
-      { name: 'Java', category: 'backend' },
-      { name: 'Spring', category: 'backend' },
-      { name: 'Node.js', category: 'backend' },
-      { name: 'NestJS', category: 'backend' },
-      { name: 'Express', category: 'backend' },
-      { name: 'TypeScript', category: 'backend' },
+      { name: 'Java',       category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/java/ED8B00' },
+      { name: 'Spring',     category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/spring/6DB33F' },
+      { name: 'Node.js',    category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+      { name: 'NestJS',     category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/nestjs/E0234E' },
+      { name: 'Express',    category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/express/64748B' },
+      { name: 'TypeScript', category: 'backend',  iconUrl: 'https://cdn.simpleicons.org/typescript/3178C6' },
       // Front-end
-      { name: 'Angular', category: 'frontend' },
-      { name: 'React', category: 'frontend' },
-      { name: 'Next.js', category: 'frontend' },
+      { name: 'Angular',    category: 'frontend', iconUrl: 'https://cdn.simpleicons.org/angular/DD0031' },
+      { name: 'React',      category: 'frontend', iconUrl: 'https://cdn.simpleicons.org/react/06B6D4' },
+      { name: 'Next.js',    category: 'frontend', iconUrl: 'https://cdn.simpleicons.org/nextdotjs/0F172A' },
       // Banco de Dados
-      { name: 'PostgreSQL', category: 'database' },
-      { name: 'MySQL', category: 'database' },
-      { name: 'Supabase', category: 'database' },
-      { name: 'MongoDB', category: 'database' },
+      { name: 'PostgreSQL', category: 'database', iconUrl: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+      { name: 'MySQL',      category: 'database', iconUrl: 'https://cdn.simpleicons.org/mysql/4479A1' },
+      { name: 'Supabase',   category: 'database', iconUrl: 'https://cdn.simpleicons.org/supabase/3ECF8E' },
+      { name: 'MongoDB',    category: 'database', iconUrl: 'https://cdn.simpleicons.org/mongodb/47A248' },
       // DevOps / Cloud
-      { name: 'AWS', category: 'devops' },
-      { name: 'Azure', category: 'devops' },
-      { name: 'Docker', category: 'devops' },
-      { name: 'Dynatrace', category: 'devops' },
-      { name: 'Datadog', category: 'devops' },
-      { name: 'Kafka', category: 'devops' },
-      { name: 'RabbitMQ', category: 'devops' },
-      // Arquiteturas
-      { name: 'Hexagonal', category: 'architecture' },
-      { name: 'MVC', category: 'architecture' },
-      { name: 'Clean Architecture', category: 'architecture' },
-      { name: 'SPA', category: 'architecture' },
-      { name: 'MicroFrontends', category: 'architecture' },
+      { name: 'AWS',        category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/amazonaws/FF9900' },
+      { name: 'Azure',      category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/microsoftazure/0078D4' },
+      { name: 'Docker',     category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/docker/2496ED' },
+      { name: 'Dynatrace',  category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/dynatrace/1496FF' },
+      { name: 'Datadog',    category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/datadog/632CA6' },
+      { name: 'Kafka',      category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/apachekafka/374151' },
+      { name: 'RabbitMQ',   category: 'devops',   iconUrl: 'https://cdn.simpleicons.org/rabbitmq/FF6600' },
     ];
   }
 }

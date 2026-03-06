@@ -1,4 +1,4 @@
-import { Component, input, computed } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Experience } from '../../../../core/models/experience.model';
 import { Badge } from '../../../../shared/components/badge/badge';
 
@@ -10,8 +10,4 @@ import { Badge } from '../../../../shared/components/badge/badge';
 })
 export class ExperienceCard {
   experience = input.required<Experience>();
-
-  readonly initial = computed(() =>
-    this.experience().company.charAt(0).toUpperCase()
-  );
 }
