@@ -17,6 +17,9 @@ export interface Award {
   event: string;
   year: number;
   medal: string;
+  image: string;
+  description: string;
+  imagePosition?: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -37,28 +40,47 @@ de CRM, integrações cloud e sistemas distribuídos. Acredito que boas decisõe
 no produto final — e é isso que me motiva todos os dias.`,
       awards: [
         {
-          title: '🥇 1º Lugar',
+          title: '1º Lugar',
           event: 'Bradesco Hackathon',
           year: 2025,
           medal: '🥇',
+          image: 'BradescoHackathon.jpg',
+          imagePosition: 'top',
+          description: 'Vencedores do Bradesco Hackathon 2025 com o FinTrack — plataforma de educação financeira com análise de gastos por IA, metas personalizadas e dashboards interativos para clientes do banco.',
         },
         {
-          title: '🥇 1º Lugar',
-          event: 'HackerCidadão 2025 — Prefeitura do Recife / Emprel',
+          title: '1º Lugar',
+          event: 'HackerCidadão 2025 — Prefeitura do Recife',
           year: 2025,
           medal: '🥇',
+          image: 'HackerCidadão.jpg',
+          imagePosition: 'top',
+          description: 'Vencedores do HackerCidadão 2025 com o CidadeConecta — plataforma que conecta cidadãos à Prefeitura do Recife com geolocalização e acompanhamento de demandas urbanas em tempo real.',
         },
         {
-          title: '🥈 2º Lugar',
+          title: '2º Lugar',
           event: 'LuminaThon',
           year: 2025,
           medal: '🥈',
+          image: 'Luminathon.jpg',
+          description: '2º lugar no LuminaThon com o LuminaBoard — ferramenta colaborativa de gestão de projetos com quadros Kanban em tempo real, integração com APIs externas e notificações via WebSocket.',
         },
         {
           title: 'Participação',
-          event: 'Compass UOL Hackathon — Node.js Track',
+          event: 'HackaHealth',
           year: 2025,
           medal: '🏅',
+          image: 'HackaHealth.jpg',
+          imagePosition: 'top',
+          description: 'Participação no HackaHealth, hackathon voltado à inovação em saúde, desenvolvendo solução de impacto social com foco em acessibilidade e tecnologia aplicada ao bem-estar.',
+        },
+        {
+          title: 'Participação',
+          event: 'NASA Space Apps Challenge',
+          year: 2025,
+          medal: '🚀',
+          image: 'Nasa%20Hackathon.jpg',
+          description: 'Participação no NASA Space Apps Challenge, maior hackathon do mundo, com solução voltada à exploração espacial e visualização de dados abertos da NASA.',
         },
       ],
     };
