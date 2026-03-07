@@ -14,6 +14,7 @@ export class Navbar {
     { label: 'Experiência', anchor: '#experience' },
     { label: 'Projetos', anchor: '#projects' },
     { label: 'Tecnologias', anchor: '#tech-stack' },
+    { label: 'Contato', anchor: '#contact' },
   ];
 
   @HostListener('window:scroll')

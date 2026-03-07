@@ -6,12 +6,13 @@ import { About } from './features/about/about';
 import { Experience } from './features/experience/experience';
 import { Projects } from './features/projects/projects';
 import { TechStack } from './features/tech-stack/tech-stack';
+import { Contact } from './features/contact/contact';
 import { ThemeToggle } from './shared/components/theme-toggle/theme-toggle';
 import { ScrollAnimationService } from './core/services/scroll-animation.service';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Footer, Hero, About, Experience, Projects, TechStack, ThemeToggle],
+  imports: [Navbar, Footer, Hero, About, Experience, Projects, TechStack, Contact, ThemeToggle],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
