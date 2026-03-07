@@ -1,7 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { Component, inject, signal } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
-import { map } from 'rxjs';
 import { ContactService } from '../../core/services/contact.service';
 import { SectionTitle } from '../../shared/components/section-title/section-title';
 
@@ -21,10 +19,7 @@ export class Contact {
     message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]],
   });
 
-  readonly messageLength = toSignal(
-    this.form.controls.message.valueChanges.pipe(map(v => v.length)),
-    { initialValue: 0 },
-  );
+  readonly messageLength = signal(0);
 
   onSubmit(): void {
     if (this.form.invalid) {
