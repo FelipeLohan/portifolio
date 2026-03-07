@@ -180,7 +180,6 @@
               </label>
               <textarea id="contact-message" formControlName="message" rows="5"
                         placeholder="Conte sobre seu projeto, ideia ou oportunidade..."
-                        (input)="messageLength.set($any($event.target).value.length)"
                         [class]="'w-full px-4 py-2.5 rounded-lg text-[0.95rem] outline-none transition-all duration-200 resize-none '
                                  + 'bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-slate-100 '
                                  + 'placeholder:text-slate-300 dark:placeholder:text-slate-600 '
@@ -188,20 +187,13 @@
                                      ? 'border border-red-400 dark:border-red-600 ring-1 ring-red-300 dark:ring-red-800'
                                      : 'border border-slate-200 dark:border-slate-600 focus:border-blue-400 dark:focus:border-blue-500 focus:ring-1 focus:ring-blue-200 dark:focus:ring-blue-900')">
               </textarea>
-              <div class="flex items-center justify-between">
-                @if (isInvalid('message')) {
-                  <span class="text-[0.78rem] text-red-500 dark:text-red-400">
-                    @if (form.controls.message.errors?.['required']) { Mensagem é obrigatória. }
-                    @else if (form.controls.message.errors?.['minlength']) { Mínimo de 10 caracteres. }
-                    @else { Máximo de 500 caracteres. }
-                  </span>
-                } @else {
-                  <span></span>
-                }
-                <span class="text-[0.75rem] text-slate-400 dark:text-slate-500 ml-auto">
-                  {{ messageLength() }}/500
+              @if (isInvalid('message')) {
+                <span class="text-[0.78rem] text-red-500 dark:text-red-400">
+                  @if (form.controls.message.errors?.['required']) { Mensagem é obrigatória. }
+                  @else if (form.controls.message.errors?.['minlength']) { Mínimo de 10 caracteres. }
+                  @else { Máximo de 500 caracteres. }
                 </span>
-              </div>
+              }
             </div>
 
             <!-- Erro da API -->

@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { ContactService } from '../../core/services/contact.service';
 import { SectionTitle } from '../../shared/components/section-title/section-title';
@@ -18,8 +18,6 @@ export class Contact {
     phone:   [''],
     message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]],
   });
-
-  readonly messageLength = signal(0);
 
   onSubmit(): void {
     if (this.form.invalid) {
