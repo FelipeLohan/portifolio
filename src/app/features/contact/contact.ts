@@ -13,10 +13,10 @@ export class Contact {
   readonly contactService = inject(ContactService);
 
   readonly form = this.fb.nonNullable.group({
-    name:    ['', [Validators.required, Validators.minLength(2)]],
-    email:   ['', [Validators.required, Validators.email]],
-    phone:   [''],
-    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]],
+    name:            ['', [Validators.required, Validators.minLength(2)]],
+    email:           ['', [Validators.required, Validators.email]],
+    telephoneNumber: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{10,15}$/)]],
+    message:         ['', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]],
   });
 
   onSubmit(): void {
@@ -25,12 +25,8 @@ export class Contact {
       return;
     }
 
-    const { name, email, phone, message } = this.form.getRawValue();
-    const dto = phone?.trim()
-      ? { name, email, phone: phone.trim(), message }
-      : { name, email, message };
-
-    this.contactService.send(dto).subscribe({
+    const { name, email, telephoneNumber, message } = this.form.getRawValue();
+    this.contactService.send({ name, email, telephoneNumber, message }).subscribe({
       error: () => { /* tratado no service */ },
     });
   }
