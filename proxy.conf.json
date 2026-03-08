@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "https://portifolioapi.felipelohan.com",
+    "secure": true,
+    "pathRewrite": { "^/api": "" },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
