@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://portifolioapi.felipelohan.com:8000',
+  apiUrl: 'https://portifolioapi.felipelohan.com',
 };
