@@ -2,10 +2,11 @@ import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, throwError } from 'rxjs';
 import { ContactDto } from '../models/contact.model';
+import { environment } from '../../../environments/environment';
 
 export type ContactStatus = 'idle' | 'loading' | 'success' | 'error';
 
-const API_URL = '/api/customers';
+const API_URL = `${environment.apiUrl}/customers`;
 
 @Injectable({ providedIn: 'root' })
 export class ContactService {
