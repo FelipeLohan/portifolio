@@ -1,6 +1,6 @@
 export interface ContactDto {
   name: string;
   email: string;
-  phone?: string;
+  telephoneNumber: string;
   message: string;
 }

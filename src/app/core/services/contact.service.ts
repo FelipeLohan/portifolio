@@ -5,7 +5,7 @@ import { ContactDto } from '../models/contact.model';
 
 export type ContactStatus = 'idle' | 'loading' | 'success' | 'error';
 
-const API_URL = '/api/contact';
+const API_URL = '/api/customers';
 
 @Injectable({ providedIn: 'root' })
 export class ContactService {
