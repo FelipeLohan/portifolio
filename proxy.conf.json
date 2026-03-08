@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://portifolioapi.felipelohan.com",
+    "target": "https://portifolioapi.felipelohan.com:8000",
     "secure": true,
     "pathRewrite": { "^/api": "" },
     "changeOrigin": true,
