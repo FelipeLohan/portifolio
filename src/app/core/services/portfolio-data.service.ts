@@ -96,7 +96,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
         period: 'dez/2025 – atual',
         description:
           'Atuação como Analista de Sistemas Estagiário, desenvolvendo soluções com Angular no front-end e Java no back-end em ambiente híbrido. Participação em projetos internos do banco com foco em qualidade e escalabilidade.',
-        tags: ['Angular', 'Java', 'Spring', 'TypeScript', 'Git'],
+        tags: ['Angular', 'Java', 'Spring', 'TypeScript', 'Azure', 'Kafka', 'MongoDB', 'Git'],
         current: true,
         location: 'Recife, PE',
         type: 'Estágio · Híbrido',
@@ -109,7 +109,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
         period: 'jul/2025 – set/2025',
         description:
           'Desenvolvimento full-stack autônomo com NestJS no back-end e Next.js/React no front-end. Responsável pela modelagem de dados e tomada de decisões técnicas da aplicação.',
-        tags: ['NestJS', 'Next.js', 'React', 'TypeScript', 'PostgreSQL'],
+        tags: ['NestJS', 'Next.js', 'React', 'TypeScript', 'PostgreSQL', 'Git'],
         current: false,
         location: 'Remoto',
         type: 'Autônomo · Remoto',
@@ -122,7 +122,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
         period: 'mai/2025 – jul/2025',
         description:
           'Construção de sistema CRM do zero com NestJS em arquitetura de microsserviços. Uso de Redis para cache, arquitetura cloud e decisões técnicas sobre infraestrutura e comunicação entre serviços.',
-        tags: ['NestJS', 'Redis', 'Docker', 'AWS'],
+        tags: ['NestJS', 'Redis', 'Docker', 'AWS', 'Git'],
         current: false,
         location: 'Recife, PE',
         type: 'Tempo integral · Remoto',
@@ -135,7 +135,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
         period: 'abr/2025 – jul/2025',
         description:
           'Trilha intensiva de back-end com Node.js, Express e NestJS. Uso de Docker para containerização, mensageria com Kafka e RabbitMQ, e banco de dados NoSQL com MongoDB.',
-        tags: ['Node.js', 'Express', 'NestJS', 'Docker', 'Kafka', 'RabbitMQ', 'MongoDB'],
+        tags: ['Node.js', 'Express', 'NestJS', 'Docker', 'Kafka', 'RabbitMQ', 'MongoDB', 'Git'],
         current: false,
         location: 'Remoto',
         type: 'Estágio · Remoto',
