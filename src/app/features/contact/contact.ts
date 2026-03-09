@@ -15,9 +15,25 @@ export class Contact {
   readonly form = this.fb.nonNullable.group({
     name:            ['', [Validators.required, Validators.minLength(2)]],
     email:           ['', [Validators.required, Validators.email]],
-    telephoneNumber: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{10,15}$/)]],
+    telephoneNumber: ['', [Validators.required, Validators.pattern(/^\d{11}$/)]],
     message:         ['', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]],
   });
+
+  formatPhone(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const digits = input.value.replace(/\D/g, '').slice(0, 11);
+
+    // display: (81) 90000-0000
+    let display = digits;
+    if (digits.length > 7) {
+      display = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+    } else if (digits.length > 2) {
+      display = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    }
+
+    this.form.controls.telephoneNumber.setValue(digits, { emitEvent: false, emitModelToViewChange: false });
+    input.value = display;
+  }
 
   onSubmit(): void {
     if (this.form.invalid) {
