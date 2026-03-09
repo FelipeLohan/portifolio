@@ -162,7 +162,8 @@
                 Telefone / WhatsApp <span class="text-blue-600">*</span>
               </label>
               <input id="contact-phone" type="tel" formControlName="telephoneNumber"
-                     placeholder="+5581900000000"
+                     placeholder="(81) 9 0000-0000"
+                     (input)="formatPhone($event)"
                      [class]="'w-full px-4 py-2.5 rounded-lg text-[0.95rem] outline-none transition-all duration-200 '
                               + 'bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-slate-100 '
                               + 'placeholder:text-slate-300 dark:placeholder:text-slate-600 '
@@ -172,7 +173,7 @@
               @if (isInvalid('telephoneNumber')) {
                 <span class="text-[0.78rem] text-red-500 dark:text-red-400">
                   @if (form.controls.telephoneNumber.errors?.['required']) { Telefone é obrigatório. }
-                  @else { Formato inválido. Use apenas números (10–15 dígitos), ex: +5581900000000. }
+                  @else { Formato inválido. Digite DDD + número com 9, ex: 81912345678. }
                 </span>
               }
             </div>
