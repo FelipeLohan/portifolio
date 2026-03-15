@@ -147,37 +147,32 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
     return [
       {
         id: '1',
-        title: 'FinTrack — Bradesco Hackathon',
+        title: 'E-commerce',
         description:
-          'Solução vencedora do Bradesco Hackathon 2025. Plataforma de educação financeira com análise de gastos por IA, metas personalizadas e dashboards interativos para clientes do banco.',
-        techs: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'AWS'],
-        highlight: true,
+          'Aplicação de e-commerce full-featured desenvolvida com React e TypeScript, com foco em boas práticas de arquitetura frontend e integração com API REST.',
+        techs: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Java', 'Spring Boot', 'Spring Security', 'PostgreSQL', 'Redis', 'Docker'],
+        highlight: false,
+        githubUrl: 'https://github.com/FelipeLohan/ecommerce-react',
+        liveUrl: 'https://ecommerce.felipelohan.com/',
       },
       {
         id: '2',
-        title: 'CidadeConecta — HackerCidadão 2025',
+        title: 'Gerador de QR Code PIX',
         description:
-          'Plataforma vencedora do HackerCidadão 2025 (Prefeitura do Recife / Emprel). Sistema de gestão de demandas urbanas que conecta cidadãos à prefeitura com geolocalização e acompanhamento em tempo real.',
-        techs: ['Next.js', 'NestJS', 'PostgreSQL', 'Supabase', 'Docker'],
-        highlight: true,
-        githubUrl: 'https://github.com/felipelohan',
+          'Aplicação web que gera QR Code PIX a partir de chave PIX, nome do recebedor e cidade. Segue o padrão BR Code estático (EMVCo MPQR) do BACEN, com frontend integrado a uma API Spring Boot que monta o payload e retorna a imagem em Base64.',
+        techs: ['Angular', 'TypeScript', 'Tailwind CSS', 'Java', 'Spring Boot', 'ZXing', 'Docker'],
+        highlight: false,
+        githubUrl: 'https://github.com/FelipeLohan/pix-qrcode-generator-front',
+        liveUrl: 'https://qrcodegenerator.felipelohan.com/',
       },
       {
         id: '3',
-        title: 'LuminaBoard — LuminaThon',
+        title: 'Otimização de Rotas de Entrega',
         description:
-          '2º lugar no LuminaThon. Ferramenta colaborativa de gestão de projetos com quadros Kanban em tempo real, integração com APIs externas e sistema de notificações via WebSocket.',
-        techs: ['React', 'NestJS', 'MongoDB', 'Redis', 'Socket.io'],
-        highlight: true,
-        githubUrl: 'https://github.com/felipelohan',
-      },
-      {
-        id: '4',
-        title: 'CRM Microsserviços — Horizon',
-        description:
-          'Sistema CRM empresarial construído do zero com arquitetura de microsserviços. Módulos independentes para clientes, vendas e relatórios, comunicando via mensageria assíncrona.',
-        techs: ['NestJS', 'Redis', 'Docker', 'AWS', 'PostgreSQL', 'RabbitMQ'],
+          'API REST em NestJS e TypeScript para otimização de rotas de entrega usando o heurístico Nearest Neighbor. Organizada em monorepo com microsserviços comunicando-se por TCP e RabbitMQ.',
+        techs: ['NestJS', 'TypeScript', 'RabbitMQ'],
         highlight: false,
+        githubUrl: 'https://github.com/willtenisom/Nodebreakers',
       },
     ];
   }
