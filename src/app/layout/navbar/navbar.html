@@ -20,9 +20,10 @@
       @for (link of navLinks; track link.anchor) {
         <a
           [href]="link.anchor"
-          class="text-slate-500 dark:text-slate-400 no-underline font-medium rounded-md transition-colors duration-200
-                 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800
-                 text-2xl px-6 py-3 md:text-[0.9rem] md:px-3 md:py-2"
+          class="text-slate-500 dark:text-slate-400 no-underline font-medium transition-colors duration-200
+                 hover:text-slate-900 dark:hover:text-slate-100
+                 text-2xl px-6 py-3 md:text-[0.9rem] md:px-3 md:py-2
+                 md:underline-offset-4 md:decoration-blue-600/0 md:hover:decoration-blue-600/100 md:hover:underline md:[text-decoration-thickness:2px]"
           (click)="closeMenu()"
         >{{ link.label }}</a>
       }
