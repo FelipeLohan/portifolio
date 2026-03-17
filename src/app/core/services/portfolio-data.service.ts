@@ -147,11 +147,12 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
     return [
       {
         id: '1',
-        title: 'E-commerce',
+        title: 'E-commerce - Sirus Store',
         description:
-          'Aplicação de e-commerce full-featured desenvolvida com React e TypeScript, com foco em boas práticas de arquitetura frontend e integração com API REST.',
-        techs: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Java', 'Spring Boot', 'Spring Security', 'PostgreSQL', 'Redis', 'Docker'],
+          'Aplicação de e-commerce full-stack com frontend em React e TypeScript e backend em Java com Spring Boot. A API REST conta com autenticação OAuth2/JWT, controle de acesso por papéis, PostgreSQL como banco principal, MongoDB para histórico de pedidos e Redis para cache de produtos e categorias.',
+        techs: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Java', 'Spring Boot', 'Spring Security', 'PostgreSQL', 'Redis', 'Docker', 'MongoDB'],
         highlight: false,
+        logoUrl: 'SirusStore-Logo.svg',
         githubUrl: 'https://github.com/FelipeLohan/ecommerce-react',
         liveUrl: 'https://ecommerce.felipelohan.com/',
       },
@@ -162,6 +163,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
           'Aplicação web que gera QR Code PIX a partir de chave PIX, nome do recebedor e cidade. Segue o padrão BR Code estático (EMVCo MPQR) do BACEN, com frontend integrado a uma API Spring Boot que monta o payload e retorna a imagem em Base64.',
         techs: ['Angular', 'TypeScript', 'Tailwind CSS', 'Java', 'Spring Boot', 'Docker'],
         highlight: false,
+        logoUrl: 'Pix-logo.png',
         githubUrl: 'https://github.com/FelipeLohan/pix-qrcode-generator-front',
         liveUrl: 'https://qrcodegenerator.felipelohan.com/',
       },
@@ -172,6 +174,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
           'API REST em NestJS e TypeScript para otimização de rotas de entrega usando o heurístico Nearest Neighbor. Organizada em monorepo com microsserviços comunicando-se por TCP e RabbitMQ.',
         techs: ['NestJS', 'TypeScript', 'RabbitMQ'],
         highlight: false,
+        logoUrl: 'Rotas-logo.png',
         githubUrl: 'https://github.com/willtenisom/Nodebreakers',
       },
     ];
