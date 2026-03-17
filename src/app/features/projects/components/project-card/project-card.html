@@ -26,9 +26,19 @@
     {{ project().description }}
   </p>
 
-  <div class="flex flex-wrap gap-1.5">
+  <div class="flex flex-wrap gap-2 items-center">
     @for (tech of project().techs; track tech) {
-      <app-badge [label]="tech" variant="default" />
+      @if (techIconUrl(tech)) {
+        <div [title]="tech"
+             class="w-7 h-7 flex items-center justify-center
+                    bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600
+                    rounded-lg transition-all duration-200
+                    hover:border-blue-300 dark:hover:border-blue-600 hover:-translate-y-0.5">
+          <img [src]="techIconUrl(tech)" [alt]="tech" class="w-4 h-4" />
+        </div>
+      } @else {
+        <app-badge [label]="tech" variant="default" />
+      }
     }
   </div>
 
