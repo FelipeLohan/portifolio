@@ -1,10 +1,11 @@
 <section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-white dark:bg-slate-900">
 
-  <!-- Decorações de fundo sutis -->
-  <div class="absolute rounded-full blur-[80px] opacity-[0.08] pointer-events-none
-               w-[600px] h-[600px] bg-blue-500 -top-[100px] -left-[150px]"></div>
-  <div class="absolute rounded-full blur-[80px] opacity-[0.08] pointer-events-none
-               w-[400px] h-[400px] bg-sky-400 -bottom-[50px] right-[100px]"></div>
+  <!-- Grid de fundo sutil -->
+  <div class="absolute inset-0 pointer-events-none
+               [background-image:linear-gradient(to_right,rgb(148_163_184/0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgb(148_163_184/0.07)_1px,transparent_1px)]
+               [background-size:48px_48px]
+               [mask-image:radial-gradient(ellipse_80%_70%_at_50%_50%,black,transparent)]
+               dark:[background-image:linear-gradient(to_right,rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.04)_1px,transparent_1px)]"></div>
 
   <div class="max-w-[1200px] mx-auto px-6 pt-24 pb-16 w-full">
     <div class="flex items-center justify-between gap-16 [animation:hero-fade-up_0.8s_ease_both]">
@@ -61,18 +62,10 @@
 
       <!-- Foto -->
       <div class="flex-shrink-0 hidden lg:block [animation:hero-fade-up_0.8s_ease_0.3s_both]">
-        <div class="relative">
-          <!-- Anel externo decorativo -->
-          <div class="absolute inset-0 rounded-full
-                      bg-gradient-to-br from-blue-200 via-sky-100 to-transparent
-                      scale-[1.06] opacity-60 dark:opacity-20"></div>
-          <!-- Anel de borda azul -->
-          <div class="absolute inset-0 rounded-full border-2 border-blue-200 dark:border-blue-800 scale-[1.03]"></div>
-          <!-- Foto -->
-          <img src="Foto.png" alt="Felipe Lohan"
-               class="relative w-[280px] h-[280px] rounded-full object-cover object-top
-                      shadow-[0_8px_40px_rgba(37,99,235,0.15)]" />
-        </div>
+        <img src="Foto.png" alt="Felipe Lohan"
+             class="w-[220px] h-[280px] rounded-xl object-cover object-top
+                    border-2 border-blue-600 dark:border-blue-500
+                    shadow-[6px_6px_0_0_#2563eb] dark:shadow-[6px_6px_0_0_#1d4ed8]" />
       </div>
 
     </div>
