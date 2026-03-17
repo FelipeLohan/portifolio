@@ -30,7 +30,7 @@ export class PortfolioDataService {
       pronouns: 'ele/dele',
       location: 'Recife, Pernambuco, Brasil',
       title: 'Desenvolvedor Full-Stack | Focado em Java e Node.js',
-      bio: `Desenvolvedor Full-Stack apaixonado por arquitetura de software e soluções escaláveis. Atuo com Java, Spring, Node.js e NestJS no back-end, e Angular, React e Next.js no front-end — sempre com foco em qualidade de código e design de sistemas.
+      bio: `Desenvolvedor Full-Stack apaixonado por arquitetura de software e soluções escaláveis. Atuo com Java, Spring, Node.js e NestJS no back-end, e Angular, React e Next.js no front-end , sempre com foco em qualidade de código e design de sistemas.
 
 Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com experiência em projetos reais de CRM, integrações cloud e sistemas distribuídos. Acredito que boas decisões técnicas fazem toda a diferença no produto final.`,
       awards: [
@@ -42,17 +42,17 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
           image: 'BradescoHackathon.jpg',
           imagePosition: 'top',
           description:
-            'Vencedores do Bradesco Hackathon 2025 com o FinTrack — plataforma de educação financeira com análise de gastos por IA, metas personalizadas e dashboards interativos para clientes do banco.',
+            'Vencedores do Bradesco Hackathon 2025 com solução para combate a golpes em compra e venda de veículos usados , o Bradesco atua como intermediador via Contrato Inteligente, retendo o veículo e o pagamento até a confirmação segura da transação para ambas as partes.',
         },
         {
           title: '1º Lugar',
-          event: 'HackerCidadão 2025 — Prefeitura do Recife',
+          event: 'HackerCidadão 2025 , Prefeitura do Recife',
           year: 2025,
           medal: '🥇',
           image: 'HackerCidadão.jpg',
           imagePosition: 'top',
           description:
-            'Vencedores do HackerCidadão 2025 com o CidadeConecta — plataforma que conecta cidadãos à Prefeitura do Recife com geolocalização e acompanhamento de demandas urbanas em tempo real.',
+            'Vencedores do HackerCidadão 2025 com o Arrecifes , solução para o app Conecta Recife que incentiva doação de sangue, exames preventivos, adoção de pets e vacinação, recompensando usuários com moedas Capibas para uso em transporte público e serviços essenciais.',
         },
         {
           title: '2º Lugar',
@@ -61,7 +61,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
           medal: '🥈',
           image: 'Luminathon.jpg',
           description:
-            '2º lugar no LuminaThon com o LuminaBoard — ferramenta colaborativa de gestão de projetos com quadros Kanban em tempo real, integração com APIs externas e notificações via WebSocket.',
+            '2º lugar no LuminaThon com o BuscaSaúde , plataforma que conecta pacientes a profissionais de saúde com busca avançada, agendamento via WhatsApp, gestão de exames e consultas, e perfis verificados para os profissionais.',
         },
         {
           title: 'Participação',
@@ -71,7 +71,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
           image: 'HackaHealth.jpg',
           imagePosition: 'top',
           description:
-            'Participação no HackaHealth, hackathon voltado à inovação em saúde, desenvolvendo solução de impacto social com foco em acessibilidade e tecnologia aplicada ao bem-estar.',
+            'Participação no HackaHealth com IA assistiva para médicos , capaz de ler e analisar múltiplos exames, gerar resumos inteligentes, exibir dashboards com insights e identificar padrões para previsão de doenças, apoiando diagnósticos mais precisos.',
         },
         {
           title: 'Participação',
@@ -80,7 +80,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
           medal: '🚀',
           image: 'Nasa%20Hackathon.jpg',
           description:
-            'Participação no NASA Space Apps Challenge, maior hackathon do mundo, com solução voltada à exploração espacial e visualização de dados abertos da NASA.',
+            'Participação no NASA Space Apps Challenge com o Recyclonaut , sistema de gerenciamento de resíduos para tripulantes espaciais, permitindo reciclar, reutilizar ou descartar resíduos de forma eficiente e transformá-los em produtos úteis, reduzindo o desperdício a bordo.',
         },
       ],
     };
@@ -160,7 +160,7 @@ Vencedor de hackathons como o Bradesco Hackathon e o HackerCidadão 2025, com ex
         title: 'Gerador de QR Code PIX',
         description:
           'Aplicação web que gera QR Code PIX a partir de chave PIX, nome do recebedor e cidade. Segue o padrão BR Code estático (EMVCo MPQR) do BACEN, com frontend integrado a uma API Spring Boot que monta o payload e retorna a imagem em Base64.',
-        techs: ['Angular', 'TypeScript', 'Tailwind CSS', 'Java', 'Spring Boot', 'ZXing', 'Docker'],
+        techs: ['Angular', 'TypeScript', 'Tailwind CSS', 'Java', 'Spring Boot', 'Docker'],
         highlight: false,
         githubUrl: 'https://github.com/FelipeLohan/pix-qrcode-generator-front',
         liveUrl: 'https://qrcodegenerator.felipelohan.com/',
