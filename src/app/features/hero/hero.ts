@@ -10,5 +10,5 @@ export class Hero {
   private readonly data = inject(PortfolioDataService);
 
   readonly about = this.data.getAbout();
-  readonly awards = this.about.awards.slice(0, 3);
+  readonly awards = this.about.awards.slice(0, 2);
 }
